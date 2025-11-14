@@ -17,13 +17,13 @@ const quotes = [
 
 export default function Testimonials() {
   return (
-    <section id="stories" className="bg-white text-black">
+    <section id="stories" className="bg-black text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid md:grid-cols-3 gap-6">
           {quotes.map((q, i) => (
-            <div key={i} className="border border-black/10 rounded-xl p-6">
+            <div key={i} className="rounded-xl border border-white/10 bg-white/5 backdrop-blur p-6">
               <Quote className="mb-4" size={20} />
-              <p className="text-black/80">{q.text}</p>
+              <p className="text-white/80">{q.text}</p>
               <div className="mt-4 text-sm font-medium">{q.name}</div>
             </div>
           ))}

@@ -9,15 +9,15 @@ const products = [
 
 function ProductCard({ product }) {
   return (
-    <div className="group border border-black/10 rounded-xl overflow-hidden bg-white">
+    <div className="group rounded-xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-md text-white">
       <div className="aspect-square overflow-hidden">
         <img src={product.img} alt={product.name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
       </div>
       <div className="p-4 flex items-start justify-between gap-3">
         <div>
           <h4 className="font-medium leading-tight">{product.name}</h4>
-          <div className="flex items-center gap-1 text-xs text-black/60 mt-1">
-            <Star size={14} className="fill-black" /> {product.rating}
+          <div className="flex items-center gap-1 text-xs text-white/70 mt-1">
+            <Star size={14} className="fill-white" /> {product.rating}
           </div>
         </div>
         <div className="text-right">
@@ -33,12 +33,12 @@ function ProductCard({ product }) {
 
 export default function ProductGrid() {
   return (
-    <section id="products" className="bg-white text-black">
+    <section id="products" className="bg-black text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="flex items-end justify-between mb-8">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">Featured products</h2>
-            <p className="text-sm text-black/60 mt-1">Curated best-sellers loved by our customers</p>
+            <p className="text-sm text-white/70 mt-1">Curated best-sellers loved by our customers</p>
           </div>
           <a href="#" className="text-sm hover:underline">Shop all</a>
         </div>
